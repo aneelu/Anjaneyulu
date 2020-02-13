@@ -1,0 +1,48 @@
+ 
+        customerInformationTable.setText(CON_4, CON_1, sdpOrdersAndAuditlogsBean.getSdpUser().getSdpContact().getMobile());
+                
+        customerInformationTable.setText(CON_5, CON_1, sdpOrdersAndAuditlogsBean.getSdpUser().getEmailId());
+        
+        As per the Team discussion logging this as a CR.
+
+Support team requested to have the below information available at Provider portal in order to assist customer calls better. team has decided to keep this information available at  View Orders and Audit Logs tool based on the purpose of this tool and future vision.
+
+ 
+
+New Fields required to display:
+
+1. Customer Phone Number
+
+2. Customer Email Address
+
+3. Customer Secondary users list display Login ID and Name (might be good to display this information  as a new section just below the customer information in tabular form.) display this table all the times so that we no need to check if the entered customer is a primary or secondary.
+
+for example: feel free to come up with better approach based on the available space on that screen.
+
+Customer Login ID	Customer Name	Primary / Secondary
+ 
+
+ 
+
+please provide all the spec updates before attempting any development work.
+refer the original ticket TBST-89 for more information. 
+
+ 
+
+Note: prioritize based on the schedule 
+
+Additional Details (Oct 11):
+1) "Customer Phone Number" and "Customer Email Address" should be added between the existing "Company" and "Partner" fields in the "Customer Information" section. They should show the phone number and email address associated to the customer user shown in the "Customer Information" section.
+2) All users associated to the same Company as the customer user shown in the "Customer Information" section should be shown in a tabular format with the following 3 columns:
+
+Customer Login ID
+Customer Name
+Type
+Other details on the table:
+a) It should be added as a new section between the existing "Customer Information" and "Select Order" sections.
+b) It only needs to be shown on the 1st screen of the tool (meaning it does not need to be shown on the second screen that shown details for a selected order). However, if it is easier to also show it on the second screen that is fine.
+c) It should have a fixed height of 4 rows, including the header (column title) row, meaning that at most 3 customer users will be visible at the same time.
+d) It should be scrollable vertically with a fixed header (column title) row to allow viewing of all users for any customer that has more than 3 users.
+e) The possible values for the "Type" field should be either "Primary" or "Secondary".
+f) The "Primary" user for the customer should always be shown as the first entry (row) in the table, followed by all the secondary users sorted by "Customer Login ID" ascending. So, overall sort of the table should be first on "Type" ascending and then on "Customer Login ID" ascending.
+g) The customer user that is shown in the "Customer Information" section should also be shown in the table.
